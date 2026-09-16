@@ -23,7 +23,7 @@ export default function HealthPage() {
       <section className="pb-20">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <div className="rounded-[28px] border border-sand bg-white p-7 sm:p-10">
+            <div className="rounded-[28px] border-[3px] border-sand bg-white p-7 sm:p-10">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
                 <div>
                   <span className="eyebrow">Know the timeline</span>
@@ -42,8 +42,8 @@ export default function HealthPage() {
                   {SCHEDULE.map((row, i) => (
                     <div
                       key={row.stage}
-                      className={`flex items-center gap-5 border-b border-[#EAE7DF] px-2 py-5 last:border-b-0 ${
-                        i % 2 === 1 ? "bg-[#FAF9F6]" : ""
+                      className={`flex items-center gap-5 border-b border-[#F6E3CC] px-2 py-5 last:border-b-0 ${
+                        i % 2 === 1 ? "bg-[#FFF7ED]" : ""
                       } rounded-[14px]`}
                     >
                       <span

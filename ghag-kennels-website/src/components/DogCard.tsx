@@ -8,7 +8,7 @@ export default function DogCard({ dog, index = 0 }: { dog: Dog; index?: number }
 
   return (
     <article
-      className="lift card-in flex flex-col overflow-hidden rounded-[24px] border border-sand bg-white"
+      className="lift card-in flex flex-col overflow-hidden rounded-[24px] border-[3px] border-sand bg-white"
       style={{ animationDelay: `${index * 70}ms` }}
       data-breed={dog.breedKey}
     >
@@ -41,7 +41,7 @@ export default function DogCard({ dog, index = 0 }: { dog: Dog; index?: number }
           </Link>
           <span
             className={`flex items-center gap-1.5 text-[11px] font-bold ${
-              dog.status === "Available" ? "text-sage-deep" : "text-[#A5821F]"
+              dog.status === "Available" ? "text-sage-deep" : "text-[#8A6914]"
             }`}
           >
             <span className={`h-2 w-2 rounded-full ${dog.status === "Available" ? "bg-sage" : "bg-[#E3B94E]"}`} />
@@ -61,7 +61,7 @@ export default function DogCard({ dog, index = 0 }: { dog: Dog; index?: number }
           ))}
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-[#EAE7DF] pt-4">
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-[#F6E3CC] pt-4">
           {HEALTH_POINTS.map((point) => (
             <span key={point} className="flex items-center gap-1.5 text-[12px] font-semibold text-mint-ink">
               <Check size={13} strokeWidth={3} />

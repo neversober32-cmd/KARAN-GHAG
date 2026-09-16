@@ -15,13 +15,13 @@ const EXPLORE = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-sand bg-[#FCFCFA]">
+    <footer className="border-t border-sand bg-[#FFFDF8]">
       <div className="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-white">
+              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-forest">
                 <PawPrint size={17} />
               </span>
               <span className="font-display text-[18px] font-bold tracking-tight">
@@ -43,7 +43,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {EXPLORE.map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="text-[13.5px] font-medium text-[#56575D] transition-colors hover:text-sage-deep">
+                  <Link to={l.to} className="text-[13.5px] font-medium text-[#475569] transition-colors hover:text-sage-deep">
                     {l.label}
                   </Link>
                 </li>
@@ -57,7 +57,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {DOGS.map((d) => (
                 <li key={d.id}>
-                  <Link to={`/dogs/${d.id}`} className="text-[13.5px] font-medium text-[#56575D] transition-colors hover:text-sage-deep">
+                  <Link to={`/dogs/${d.id}`} className="text-[13.5px] font-medium text-[#475569] transition-colors hover:text-sage-deep">
                     {d.name} <span className="text-faint">· {d.breed.split(" (")[0]}</span>
                   </Link>
                 </li>
@@ -68,7 +68,7 @@ export default function Footer() {
           {/* Visit */}
           <div>
             <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-faint">Visit us</p>
-            <ul className="mt-4 space-y-3 text-[13.5px] font-medium text-[#56575D]">
+            <ul className="mt-4 space-y-3 text-[13.5px] font-medium text-[#475569]">
               <li className="flex items-start gap-2.5">
                 <MapPin size={15} className="mt-0.5 flex-none text-clay" />
                 Veera Desai Road, Andheri West, Mumbai 400053

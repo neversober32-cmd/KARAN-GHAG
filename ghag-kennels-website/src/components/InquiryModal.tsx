@@ -52,7 +52,7 @@ export default function InquiryModal({ dog, onClose }: InquiryModalProps) {
       aria-modal="true"
       aria-label={`Inquire about ${dog}`}
     >
-      <div className="modal-pop w-full max-w-[480px] rounded-[24px] bg-cream p-7 shadow-2xl">
+      <div className="modal-pop w-full max-w-[480px] rounded-[24px] border-[3px] border-sand bg-cream p-7 shadow-2xl">
         {sent ? (
           <div className="flex flex-col items-center py-8 text-center">
             <span className="flex h-16 w-16 items-center justify-center rounded-full bg-mint">
@@ -81,7 +81,7 @@ export default function InquiryModal({ dog, onClose }: InquiryModalProps) {
               </div>
               <button
                 onClick={onClose}
-                className="flex h-9 w-9 flex-none items-center justify-center rounded-full border border-sand bg-white text-muted transition-colors hover:text-ink"
+                className="flex h-9 w-9 flex-none items-center justify-center rounded-full border-[3px] border-sand bg-white text-muted transition-colors hover:text-ink"
                 aria-label="Close"
               >
                 <X size={17} />

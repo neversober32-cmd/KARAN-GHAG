@@ -14,14 +14,25 @@ const NAV = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+      // Scroll-progress indicator (Scroll-Triggered Storytelling pattern)
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 0 ? Math.min(100, (doc.scrollTop / max) * 100) : 0);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
   // Close mobile menu on navigation
@@ -29,19 +40,19 @@ export default function Header() {
 
   const linkClass = (isActive: boolean) =>
     `rounded-full px-4 py-2.5 text-[14px] font-semibold transition-colors duration-200 ${
-      isActive ? "bg-[#E9EEF6] text-ink" : "text-[#64666E] hover:bg-[#F2F4F9] hover:text-ink"
+      isActive ? "bg-[#FFEDD5] text-ink" : "text-[#475569] hover:bg-[#FFF3E4] hover:text-ink"
     }`;
 
   return (
     <header
       id="header"
-      className={`sticky top-0 z-50 backdrop-blur-[12px] bg-[rgba(255,251,245,0.8)] transition-shadow duration-300 ${
-        scrolled ? "shadow-[0_1px_0_#E8E4DC,0_8px_24px_rgba(30,30,30,0.04)]" : ""
+      className={`sticky top-0 z-50 backdrop-blur-[12px] bg-[rgba(255,247,237,0.88)] transition-shadow duration-300 ${
+        scrolled ? "shadow-[0_1px_0_#F3DFC4,0_8px_24px_rgba(30,30,30,0.04)]" : ""
       }`}
     >
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
         <Link to="/" className="group flex items-center gap-2.5" aria-label="Ghag Kennels home">
-          <span className="flex h-10 w-10 items-center justify-center rounded-[14px] bg-sage text-white transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
+          <span className="flex h-10 w-10 items-center justify-center rounded-[14px] bg-sage text-forest transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
             <PawPrint size={19} strokeWidth={2.2} />
           </span>
           <span className="font-display text-[19px] font-bold leading-none tracking-tight sm:text-[20px]">
@@ -60,8 +71,15 @@ export default function Header() {
           </Link>
         </nav>
 
+        {/* scroll progress */}
+        <div
+          aria-hidden
+          className="scroll-progress"
+          style={{ width: `${progress}%` }}
+        />
+
         <button
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-sand bg-white text-ink lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-sand bg-white text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -84,7 +102,7 @@ export default function Header() {
               end={item.to === "/"}
               className={({ isActive }) =>
                 `rounded-2xl px-4 py-3 text-[15px] font-semibold transition-colors ${
-                  isActive ? "bg-[#E9EEF6] text-ink" : "text-ink hover:bg-[#F2F4F9]"
+                  isActive ? "bg-[#FFEDD5] text-ink" : "text-ink hover:bg-[#FFF3E4]"
                 }`
               }
             >
@@ -96,7 +114,7 @@ export default function Header() {
           </Link>
           <Link
             to="/dashboard"
-            className="mt-1 flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2.5 text-[13px] font-semibold text-faint transition-colors hover:bg-[#F2F4F9] hover:text-ink"
+            className="mt-1 flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2.5 text-[13px] font-semibold text-faint transition-colors hover:bg-[#FFF3E4] hover:text-ink"
           >
             Staff Dashboard <ArrowUpRight size={14} />
           </Link>

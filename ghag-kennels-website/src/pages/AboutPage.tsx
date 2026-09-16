@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 right-[-8%] h-[420px] w-[420px] rounded-full opacity-60 blur-3xl"
-          style={{ background: "radial-gradient(circle, #E9EFFA 0%, rgba(232,240,233,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, #FFEDD5 0%, rgba(255,237,213,0) 70%)" }}
         />
         <div className="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 { n: "24h", l: "Answer on every application" },
                 { n: "100%", l: "Lifetime take-back promise" },
               ].map((s) => (
-                <div key={s.l} className="rounded-[20px] border border-sand bg-white p-5 text-center">
+                <div key={s.l} className="rounded-[20px] border-[3px] border-sand bg-white p-5 text-center">
                   <p className="font-display text-[28px] font-bold text-sage-deep">{s.n}</p>
                   <p className="mt-1 text-[12.5px] font-medium leading-snug text-muted">{s.l}</p>
                 </div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
               <div className="relative">
-                <div className="overflow-hidden rounded-[28px] border border-sand">
+                <div className="overflow-hidden rounded-[28px] border-[3px] border-sand">
                   <img
                     src="/images/facility.jpg"
                     alt="Inside the Ghag Kennels facility in Andheri West, Mumbai"
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <span className="absolute -bottom-4 left-6 inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[12px] font-bold text-white shadow-lg">
-                  <PawPrint size={14} className="text-clay" /> Our facility · Veera Desai Road, Andheri West
+                  <PawPrint size={14} className="text-[#FDBA74]" /> Our facility · Veera Desai Road, Andheri West
                 </span>
               </div>
               <div>
@@ -176,7 +176,7 @@ export default function AboutPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {TIMELINE.map((t, i) => (
               <Reveal key={t.year} delay={i * 90}>
-                <div className="lift flex h-full flex-col rounded-[24px] border border-sand bg-white p-6">
+                <div className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-6">
                   <span className="font-display text-[26px] font-bold text-clay-deep">{t.year}</span>
                   <h3 className="mt-2 text-[15.5px] font-bold leading-snug">{t.title}</h3>
                   <p className="mt-2 flex-1 text-[13px] leading-relaxed text-muted">{t.desc}</p>
@@ -203,7 +203,7 @@ export default function AboutPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {TEAM.map((m, i) => (
               <Reveal key={m.name} delay={i * 90}>
-                <div className="lift flex h-full flex-col rounded-[24px] border border-sand bg-white p-7">
+                <div className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-7">
                   <span className="font-display flex h-14 w-14 items-center justify-center rounded-full bg-sage/12 text-[19px] font-bold text-sage-deep">
                     {m.name
                       .split(" ")
@@ -226,16 +226,16 @@ export default function AboutPage() {
       <section className="pb-20">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-sage to-sage-deep px-6 py-14 text-center text-white sm:px-12">
+            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-clay to-[#1E3A8A] px-6 py-14 text-center text-white sm:px-12">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl"
               />
               <h2 className="font-display relative text-[30px] font-bold leading-[1.08] sm:text-[40px]">
                 Come see for yourself.
-                <span className="block italic text-[#E9EFFA]">Visits are by appointment.</span>
+                <span className="block italic text-[#EFF6FF]">Visits are by appointment.</span>
               </h2>
-              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#E9EFFA]">
+              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#EFF6FF]">
                 Meet the pups, walk the facility and ask us the hard questions —
                 that&rsquo;s exactly what the process is for.
               </p>

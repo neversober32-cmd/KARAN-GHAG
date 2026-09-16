@@ -129,9 +129,9 @@ export default function HomePage() {
               <Reveal key={step.n} delay={i * 80}>
                 <Link
                   to="/process"
-                  className="lift group block h-full rounded-[20px] border border-sand bg-white p-6"
+                  className="lift group block h-full rounded-[20px] border-[3px] border-sand bg-white p-6"
                 >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-[14px] font-bold text-white transition-colors group-hover:bg-sage">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-[14px] font-bold text-white transition-colors group-hover:bg-clay">
                     {step.n}
                   </span>
                   <h4 className="mt-4 text-[16px] font-bold">{step.title}</h4>
@@ -156,12 +156,12 @@ export default function HomePage() {
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={i * 90}>
-                <figure className="lift flex h-full flex-col rounded-[24px] border border-sand bg-white p-7">
+                <figure className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-7">
                   <Quote size={22} className="text-clay" fill="currentColor" strokeWidth={0} />
-                  <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-[#45464D]">
+                  <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-[#475569]">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-3 border-t border-[#EAE7DF] pt-5">
+                  <figcaption className="mt-6 flex items-center gap-3 border-t border-[#F6E3CC] pt-5">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage/15 text-[13px] font-bold text-sage-deep">
                       {t.name.charAt(0)}
                     </span>
@@ -184,20 +184,20 @@ export default function HomePage() {
       <section className="pb-20 pt-4">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-sage to-sage-deep px-6 py-14 text-center text-white sm:px-12">
+            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-clay to-[#1E3A8A] px-6 py-14 text-center text-white sm:px-12">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl"
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-clay/25 blur-2xl"
+                className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-[#F97316]/30 blur-2xl"
               />
               <h2 className="font-display relative text-[30px] font-bold leading-[1.08] sm:text-[40px]">
                 Ready when you are.
-                <span className="block italic text-[#E9EFFA]">The pups certainly are.</span>
+                <span className="block italic text-[#EFF6FF]">The pups certainly are.</span>
               </h2>
-              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#E9EFFA]">
+              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#EFF6FF]">
                 Start a 3-minute application today — no payment, no pressure,
                 and an honest answer within 24 hours.
               </p>

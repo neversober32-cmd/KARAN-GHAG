@@ -54,7 +54,7 @@ export default function DogsPage() {
                   className={`rounded-full border px-4 py-2 text-[13px] font-semibold transition-all duration-300 ${
                     filter === f.key
                       ? "border-ink bg-ink text-white"
-                      : "border-sand bg-white text-muted hover:border-[#C6CBD6] hover:text-ink"
+                      : "border-sand bg-white text-muted hover:border-[#FDBA74] hover:text-ink"
                   }`}
                 >
                   {f.label}
@@ -98,19 +98,19 @@ export default function DogsPage() {
             ))}
 
             {/* Advice CTA card */}
-            <article className="card-in relative flex flex-col justify-center gap-4 overflow-hidden rounded-[24px] bg-ink p-8 text-white">
+            <article className="card-in relative flex flex-col justify-center gap-4 overflow-hidden rounded-[24px] bg-forest p-8 text-white">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full opacity-25 blur-2xl"
-                style={{ background: "radial-gradient(circle, #3E5C9B, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #2563EB, transparent 70%)" }}
               />
               <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                <Compass size={22} className="text-clay" />
+                <Compass size={22} className="text-[#93C5FD]" />
               </span>
               <h3 className="font-display text-[25px] font-bold leading-[1.15] sm:text-[28px]">
                 Not sure which breed fits your Mumbai life?
               </h3>
-              <p className="text-[14px] leading-relaxed text-[#A8A8A8]">
+              <p className="text-[14px] leading-relaxed text-[#CBD5E1]">
                 Tell us about your flat size, work hours and experience — we&rsquo;ll
                 match you on temperament and lifestyle, not looks.
               </p>
@@ -120,7 +120,7 @@ export default function DogsPage() {
             </article>
           </div>
         ) : (
-          <div className="fade-in mt-8 flex flex-col items-center rounded-[24px] border border-dashed border-[#C6CBD6] bg-cream px-6 py-16 text-center">
+          <div className="fade-in mt-8 flex flex-col items-center rounded-[24px] border border-dashed border-[#FDBA74] bg-cream px-6 py-16 text-center">
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-faint shadow-sm">
               <Search size={22} />
             </span>

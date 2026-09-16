@@ -40,7 +40,7 @@ export default function ApplyPage() {
       />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <Reveal>
-          <div className="grid grid-cols-1 gap-10 rounded-[32px] border border-sand bg-white p-6 sm:p-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid grid-cols-1 gap-10 rounded-[32px] border-[3px] border-sand bg-white p-6 sm:p-10 lg:grid-cols-[0.9fr_1.1fr]">
             {/* Left */}
             <div>
               <span className="eyebrow">Start here</span>
@@ -59,7 +59,7 @@ export default function ApplyPage() {
                 </p>
                 <ul className="mt-4 space-y-3.5">
                   {NEXT_STEPS.map((step) => (
-                    <li key={step.text} className="flex items-start gap-3 text-[14px] font-medium text-[#45464D]">
+                    <li key={step.text} className="flex items-start gap-3 text-[14px] font-medium text-[#475569]">
                       <span className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-white text-sage-deep shadow-sm">
                         <step.icon size={14} />
                       </span>
@@ -67,7 +67,7 @@ export default function ApplyPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-5 flex items-start gap-2.5 border-t border-[#E4DED0] pt-4">
+                <div className="mt-5 flex items-start gap-2.5 border-t border-[#F6E3CC] pt-4">
                   <ShieldCheck size={16} className="mt-0.5 flex-none text-sage-deep" />
                   <p className="text-[12px] leading-relaxed text-[#7C6A45]">
                     We never ask for payment online. If approved, the adoption
@@ -79,7 +79,7 @@ export default function ApplyPage() {
 
             {/* Right — form / success */}
             {refId ? (
-              <div className="fade-in flex flex-col items-center justify-center rounded-[24px] border border-sand bg-cream px-6 py-16 text-center">
+              <div className="fade-in flex flex-col items-center justify-center rounded-[24px] border-[3px] border-sand bg-cream px-6 py-16 text-center">
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-mint">
                   <CheckCircle2 size={34} className="text-sage-deep" />
                 </span>
@@ -88,7 +88,7 @@ export default function ApplyPage() {
                   We&rsquo;ve saved your application. Our team will review it and
                   WhatsApp you within 24 hours.
                 </p>
-                <span className="mt-5 rounded-full border border-sand bg-white px-4 py-2 text-[12px] font-bold tracking-wide text-sage-deep">
+                <span className="mt-5 rounded-full border-[3px] border-sand bg-white px-4 py-2 text-[12px] font-bold tracking-wide text-sage-deep">
                   Ref: {refId}
                 </span>
                 <Link to="/dogs" className="btn btn-secondary mt-7">

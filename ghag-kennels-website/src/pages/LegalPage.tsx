@@ -58,7 +58,7 @@ export default function LegalPage() {
         <div className="grid grid-cols-1 gap-6 pb-16 lg:grid-cols-2">
           {/* Laws */}
           <Reveal>
-            <div className="lift h-full rounded-[24px] border border-sand bg-white p-7 sm:p-8">
+            <div className="lift h-full rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-mint text-mint-ink">
                   <ScrollText size={20} />
@@ -81,7 +81,7 @@ export default function LegalPage() {
 
           {/* Documents */}
           <Reveal delay={100}>
-            <div className="lift h-full rounded-[24px] border border-sand bg-white p-7 sm:p-8">
+            <div className="lift h-full rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-parchment text-[#7C6A45]">
                   <FileText size={20} />

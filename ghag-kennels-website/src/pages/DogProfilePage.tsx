@@ -118,14 +118,14 @@ export default function DogProfilePage() {
                 {dog.health.map((rec) => {
                   const Icon = HEALTH_ICONS[rec.label] ?? ShieldCheck;
                   return (
-                    <div key={rec.label} className="lift rounded-[20px] border border-sand bg-white p-5">
+                    <div key={rec.label} className="lift rounded-[20px] border-[3px] border-sand bg-white p-5">
                       <div className="flex items-center gap-2.5">
                         <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-mint text-mint-ink">
                           <Icon size={16} />
                         </span>
                         <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-mint-ink">{rec.label}</p>
                       </div>
-                      <p className="mt-3 text-[13.5px] font-medium leading-relaxed text-[#45464D]">{rec.value}</p>
+                      <p className="mt-3 text-[13.5px] font-medium leading-relaxed text-[#475569]">{rec.value}</p>
                     </div>
                   );
                 })}
@@ -139,7 +139,7 @@ export default function DogProfilePage() {
           {/* Right — info panel */}
           <Reveal delay={60}>
             <div className="lg:sticky lg:top-24">
-              <div className="rounded-[28px] border border-sand bg-white p-7 sm:p-8">
+              <div className="rounded-[28px] border-[3px] border-sand bg-white p-7 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <h1 className="font-display text-[40px] font-bold leading-none sm:text-[46px]">{dog.name}</h1>
@@ -149,7 +149,7 @@ export default function DogProfilePage() {
                   </div>
                   <span
                     className={`mt-1 flex flex-none items-center gap-1.5 text-[12px] font-bold ${
-                      dog.status === "Available" ? "text-sage-deep" : "text-[#A5821F]"
+                      dog.status === "Available" ? "text-sage-deep" : "text-[#8A6914]"
                     }`}
                   >
                     <span className={`dot-pulse ${dog.status !== "Available" ? "!bg-[#E3B94E]" : ""}`} />
@@ -170,17 +170,17 @@ export default function DogProfilePage() {
                   ))}
                 </div>
 
-                <p className="mt-6 text-[15px] leading-relaxed text-[#45464D]">{dog.story}</p>
+                <p className="mt-6 text-[15px] leading-relaxed text-[#475569]">{dog.story}</p>
 
                 {/* Facts */}
-                <div className="mt-7 space-y-5 border-t border-[#EAE7DF] pt-6">
+                <div className="mt-7 space-y-5 border-t border-[#F6E3CC] pt-6">
                   <div>
                     <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-faint">Energy level</p>
                     <div className="mt-2.5 flex items-center gap-2">
                       {[1, 2, 3].map((seg) => (
                         <span
                           key={seg}
-                          className={`h-2.5 w-14 rounded-full ${seg <= energy ? "bg-sage" : "bg-[#EEEDF0]"}`}
+                          className={`h-2.5 w-14 rounded-full ${seg <= energy ? "bg-sage" : "bg-[#FFE9D1]"}`}
                         />
                       ))}
                       <span className="ml-1.5 text-[13px] font-bold text-sage-deep">{dog.energy}</span>
@@ -200,7 +200,7 @@ export default function DogProfilePage() {
                         return (
                           <span
                             key={g}
-                            className="flex items-center gap-1.5 rounded-full border border-sand bg-cream px-3 py-1.5 text-[12px] font-semibold text-[#45464D]"
+                            className="flex items-center gap-1.5 rounded-full border-[3px] border-sand bg-cream px-3 py-1.5 text-[12px] font-semibold text-[#475569]"
                           >
                             <Icon size={13} className="text-clay" /> {g}
                           </span>
@@ -211,11 +211,11 @@ export default function DogProfilePage() {
 
                   <div>
                     <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-faint">Training so far</p>
-                    <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-[#45464D]">{dog.training}</p>
+                    <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-[#475569]">{dog.training}</p>
                   </div>
                 </div>
 
-                <div className="mt-7 flex flex-col gap-3 border-t border-[#EAE7DF] pt-6 sm:flex-row">
+                <div className="mt-7 flex flex-col gap-3 border-t border-[#F6E3CC] pt-6 sm:flex-row">
                   <button onClick={() => openInquiry(dog.name)} className="btn btn-primary flex-1 !py-3.5 !text-[15px]">
                     <MessageCircle size={16} /> Inquire about {dog.name}
                   </button>

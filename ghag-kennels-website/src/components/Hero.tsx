@@ -11,12 +11,12 @@ export default function Hero() {
       <div
         aria-hidden
         className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full opacity-60 blur-3xl"
-        style={{ background: "radial-gradient(circle, #E9EFFA 0%, rgba(232,240,233,0) 70%)" }}
+        style={{ background: "radial-gradient(circle, #EFF6FF 0%, rgba(239,246,255,0) 70%)" }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute bottom-[-20%] left-[-12%] h-[420px] w-[420px] rounded-full opacity-50 blur-3xl"
-        style={{ background: "radial-gradient(circle, #F6E5CF 0%, rgba(244,227,211,0) 70%)" }}
+        style={{ background: "radial-gradient(circle, #FED7AA 0%, rgba(254,215,170,0) 70%)" }}
       />
 
       <div className="relative mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-12 px-5 pt-16 pb-20 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:pb-24">
@@ -105,7 +105,7 @@ export default function Hero() {
             />
 
             {/* floating card */}
-            <div className="animate-floaty absolute bottom-6 left-4 flex items-center gap-3 rounded-[16px] bg-white px-[18px] py-[14px] shadow-[0_16px_40px_rgba(0,0,0,0.14)] sm:left-6 lg:-left-8">
+            <div className="animate-floaty absolute bottom-6 left-4 flex items-center gap-3 rounded-[16px] border-[3px] border-sand bg-white px-[18px] py-[14px] shadow-[0_16px_40px_rgba(0,0,0,0.14)] sm:left-6 lg:-left-8">
               <span className="dot-pulse" aria-hidden />
               <div>
                 <p className="text-[13px] font-bold leading-tight">2 Happy Homes This Week</p>

@@ -29,7 +29,7 @@ export default function HealthSection() {
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Checklist card */}
           <Reveal>
-            <div className="lift h-full rounded-[24px] border border-sand bg-white p-7 sm:p-8">
+            <div className="lift h-full rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-mint text-mint-ink">
                   <ShieldCheck size={21} />
@@ -40,7 +40,7 @@ export default function HealthSection() {
                 {CHECKLIST.map((item) => (
                   <li
                     key={item.title}
-                    className="flex items-start gap-3 border-b border-[#EAE7DF] py-3.5 last:border-b-0"
+                    className="flex items-start gap-3 border-b border-[#F6E3CC] py-3.5 last:border-b-0"
                   >
                     <span className="mt-0.5 flex h-[22px] w-[22px] flex-none items-center justify-center rounded-full bg-mint text-mint-ink">
                       <Check size={12} strokeWidth={3.2} />
@@ -57,7 +57,7 @@ export default function HealthSection() {
 
           {/* Vet card */}
           <Reveal delay={120}>
-            <div className="lift flex h-full flex-col rounded-[24px] border border-sand bg-white p-7 sm:p-8">
+            <div className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
               <div className="flex items-center gap-4">
                 <span className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-sage/15 text-sage-deep">
                   <Stethoscope size={24} />
@@ -73,15 +73,15 @@ export default function HealthSection() {
               </div>
 
               <ul className="mt-6 space-y-3.5">
-                <li className="flex items-start gap-3 text-[14px] text-[#45464D]">
+                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
                   <Clock size={17} className="mt-0.5 flex-none text-clay" />
                   Facility clinic hours: Tue & Sat, 10:00 am – 1:00 pm
                 </li>
-                <li className="flex items-start gap-3 text-[14px] text-[#45464D]">
+                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
                   <MapPin size={17} className="mt-0.5 flex-none text-clay" />
                   Ghag Facility, Veera Desai Road, Andheri West, Mumbai 400053
                 </li>
-                <li className="flex items-start gap-3 text-[14px] text-[#45464D]">
+                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
                   <MessageCircle size={17} className="mt-0.5 flex-none text-clay" />
                   WhatsApp-first support — usually replies within a few hours
                 </li>

@@ -110,7 +110,7 @@ function FaqItem({ q, a, open, onToggle }: { q: string; a: string; open: boolean
       >
         <span className="text-[15px] font-bold">{q}</span>
         <span
-          className={`flex h-8 w-8 flex-none items-center justify-center rounded-full border border-sand text-muted transition-transform duration-300 ${
+          className={`flex h-8 w-8 flex-none items-center justify-center rounded-full border-[3px] border-sand text-muted transition-transform duration-300 ${
             open ? "rotate-180 border-sage/40 bg-mint text-sage-deep" : ""
           }`}
         >
@@ -184,7 +184,7 @@ export default function ProcessPage() {
         <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
           {STEPS.map((step, i) => (
             <Reveal key={step.n} delay={i * 80}>
-              <div className="lift h-full rounded-[24px] border border-sand bg-white p-7 sm:p-8">
+              <div className="lift h-full rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
                 <div className="flex items-start justify-between gap-4">
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-[16px] font-bold text-white">
                     {step.n}
@@ -193,8 +193,8 @@ export default function ProcessPage() {
                 </div>
                 <h2 className="font-display mt-5 text-[22px] font-bold">{step.title}</h2>
                 <p className="mt-1 text-[12px] font-bold uppercase tracking-[0.12em] text-sage">{step.time}</p>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-[#45464D]">{step.desc}</p>
-                <ul className="mt-4 space-y-2 border-t border-[#EAE7DF] pt-4">
+                <p className="mt-3 text-[14.5px] leading-relaxed text-[#475569]">{step.desc}</p>
+                <ul className="mt-4 space-y-2 border-t border-[#F6E3CC] pt-4">
                   {step.points.map((p) => (
                     <li key={p} className="flex items-start gap-2.5 text-[13.5px] font-medium text-muted">
                       <span className="mt-[7px] h-1.5 w-1.5 flex-none rounded-full bg-clay" />

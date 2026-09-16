@@ -94,7 +94,7 @@ export default function ContactPage() {
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {CHANNELS.map((c, i) => (
               <Reveal key={c.title} delay={i * 80}>
-                <div className="lift flex h-full flex-col rounded-[24px] border border-sand bg-white p-6">
+                <div className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-6">
                   <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-mint text-sage-deep">
                     <c.icon size={19} />
                   </span>
@@ -124,7 +124,7 @@ export default function ContactPage() {
           {/* Form + side panel */}
           <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
-              <div className="rounded-[28px] border border-sand bg-white p-6 sm:p-9">
+              <div className="rounded-[28px] border-[3px] border-sand bg-white p-6 sm:p-9">
                 {sent ? (
                   <div className="fade-in flex flex-col items-center justify-center px-6 py-16 text-center">
                     <span className="flex h-16 w-16 items-center justify-center rounded-full bg-mint">
@@ -208,7 +208,7 @@ export default function ContactPage() {
             <Reveal delay={120}>
               <div className="flex h-full flex-col gap-6">
                 {/* Map / directions card */}
-                <div className="relative flex-1 overflow-hidden rounded-[28px] border border-sand bg-parchment">
+                <div className="relative flex-1 overflow-hidden rounded-[28px] border-[3px] border-sand bg-parchment">
                   <img
                     src="/images/facility.jpg"
                     alt="Ghag Kennels facility in Andheri West, Mumbai"
@@ -232,7 +232,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Prefer talking card */}
-                <div className="rounded-[28px] border border-sand bg-white p-6">
+                <div className="rounded-[28px] border-[3px] border-sand bg-white p-6">
                   <h3 className="text-[15.5px] font-bold">Prefer talking it through?</h3>
                   <ul className="mt-4 space-y-3 text-[13.5px] font-medium text-muted">
                     <li className="flex items-start gap-2.5">
