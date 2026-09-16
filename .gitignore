@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+.env.local
+.vercel
+gatezero-kennels-rehoming-website/dist
+gatezero-kennels-rehoming-website/node_modules
