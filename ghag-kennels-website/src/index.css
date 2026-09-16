@@ -1,0 +1,438 @@
+@import "tailwindcss";
+
+/* ============================================================
+   GHAG KENNELS — DESIGN SYSTEM
+   Source of truth: design-system/ghag-kennels/MASTER.md
+   USER OVERRIDE 2026-09-16: "CozyPaws" reference palette —
+   deep forest green + pale mint + soft green panels + vivid orange CTA
+   Style: Claymorphism · Pattern: Scroll-Triggered Storytelling
+   Type: Varela Round / Nunito Sans
+   ============================================================ */
+
+@theme {
+  /* Semantic palette — CozyPaws-style green/orange */
+  --color-cream: #eaf6ec; /* Pale mint page background */
+  --color-ink: #143d1b; /* Deep green foreground */
+  --color-muted: #3f6247; /* Muted green-gray */
+  --color-faint: #55705b; /* Subtle text — ≥4.5:1 on mint bg */
+  --color-sage: #1e5b28; /* Primary forest green */
+  --color-sage-deep: #0e3a16; /* Deepest green — hover/gradients */
+  --color-clay: #f97316; /* Vivid orange accent / CTA */
+  --color-clay-deep: #c2410c; /* Orange deep — hover */
+  --color-sand: #bfe3c0; /* Light green borders */
+  --color-parchment: #d8efda; /* Deeper mint tinted sections */
+  --color-forest: #0b2e10; /* Darkest green bands */
+  --color-mint: #a8e3a4; /* Soft green panels/chips */
+  --color-mint-ink: #14532d; /* Text on soft green */
+  --font-display: "Varela Round", "Nunito Sans", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Claymorphism primitives */
+:root {
+  --clay-radius: 20px;
+  --clay-border: 3px;
+  --clay-outer-sm: 3px 4px 10px rgba(11, 46, 16, 0.1);
+  --clay-outer: 6px 8px 18px rgba(11, 46, 16, 0.13);
+  --clay-lift: 10px 14px 30px rgba(11, 46, 16, 0.19);
+  --clay-inner: inset 2px 2px 5px rgba(255, 255, 255, 0.72),
+    inset -2px -2px 6px rgba(11, 46, 16, 0.06);
+  --bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --press: 200ms ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+section[id],
+header[id] {
+  scroll-margin-top: 88px;
+}
+
+/* cursor-pointer on all clickable elements */
+a,
+button,
+select,
+summary,
+label[for],
+[role="button"] {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.3);
+  color: #143d1b;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #eaf6ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #8fd096;
+  border-radius: 999px;
+  border: 3px solid #eaf6ec;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+/* Visible focus states for keyboard nav */
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(11, 46, 16, 0.55);
+  outline-offset: 2px;
+}
+
+/* ---------- Typography helpers ---------- */
+.font-display {
+  font-family: var(--font-display);
+  /* Varela Round ships a single 400 weight — chunky comes from size */
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-sage-deep);
+}
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-clay);
+}
+
+/* ---------- Buttons (clay) ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: var(--font-sans);
+  line-height: 1;
+  border-radius: 999px;
+  border: var(--clay-border) solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform var(--press),
+    box-shadow var(--press),
+    background-color 200ms,
+    border-color 200ms,
+    color 200ms;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  transition-timing-function: var(--bounce);
+}
+.btn:active {
+  transform: translateY(1px) scale(0.985);
+  box-shadow: var(--clay-outer-sm), var(--clay-inner);
+}
+
+/* CTA: vivid orange pill, deep-green label (4.6:1), white on hover-deep */
+.btn-primary {
+  background: var(--color-clay);
+  color: #0e3a16;
+  border-color: #ea580c;
+  box-shadow: var(--clay-outer-sm), var(--clay-inner);
+}
+.btn-primary:hover {
+  background: var(--color-clay-deep);
+  border-color: var(--color-clay-deep);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.35), var(--clay-inner);
+}
+
+/* Secondary: white card, soft green border, deep green label */
+.btn-secondary {
+  background: #fff;
+  color: var(--color-sage-deep);
+  border-color: #a8e3a4;
+  box-shadow: var(--clay-outer-sm), var(--clay-inner);
+}
+.btn-secondary:hover {
+  border-color: var(--color-sage);
+  box-shadow: var(--clay-outer), var(--clay-inner);
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--color-forest);
+  border-color: #fff;
+  box-shadow: var(--clay-outer-sm);
+}
+.btn-white:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- Cards / tags / badges (clay) ---------- */
+.lift {
+  box-shadow: var(--clay-outer-sm), var(--clay-inner);
+  transition:
+    transform 300ms var(--bounce),
+    box-shadow 300ms var(--bounce),
+    border-color 200ms;
+}
+.lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--clay-lift), var(--clay-inner);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
+  background: var(--color-parchment);
+  border: 2px solid var(--color-sand);
+  border-radius: 999px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 2px solid transparent;
+}
+.status-available {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #4ade80;
+}
+.status-reserved {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+.status-rescued {
+  background: var(--color-parchment);
+  color: var(--color-ink);
+  border-color: var(--color-sand);
+}
+
+.dot-pulse {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--color-clay);
+  flex: none;
+}
+.dot-pulse::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--color-clay);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  80%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* ---------- Forms ---------- */
+.label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+.input {
+  width: 100%;
+  background: #fff;
+  border: 2px solid #cbe7cd;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+.input::placeholder {
+  color: #7d9484;
+  font-weight: 400;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--color-sage);
+  box-shadow: 0 0 0 3px rgba(30, 91, 40, 0.18);
+}
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23143D1B' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+/* ---------- Scroll progress (storytelling pattern) ---------- */
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sage), var(--color-clay));
+  border-radius: 0 999px 999px 0;
+  transition: width 120ms linear;
+}
+
+/* ---------- Motion ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+.animate-floaty {
+  animation: floaty 5.5s ease-in-out infinite;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card-in {
+  animation: card-in 0.55s var(--bounce) both;
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.modal-pop {
+  animation: modal-pop 0.35s var(--bounce) both;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 0.3s ease both;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Reduced motion — final readable state, no parallax */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .lift,
+  .btn {
+    transition-duration: 1ms;
+  }
+  .lift:hover,
+  .btn:hover {
+    transform: none;
+  }
+  .scroll-progress {
+    transition: none;
+  }
+  .animate-floaty,
+  .marquee-track,
+  .dot-pulse::after,
+  .card-in,
+  .modal-pop {
+    animation: none;
+  }
+}

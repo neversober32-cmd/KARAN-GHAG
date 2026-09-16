@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "cd gatezero-kennels-rehoming-website && npm run build",
-  "outputDirectory": "gatezero-kennels-rehoming-website/dist",
-  "installCommand": "npm install --prefix gatezero-kennels-rehoming-website",
+  "buildCommand": "cd ghag-kennels-website && npm run build",
+  "outputDirectory": "ghag-kennels-website/dist",
+  "installCommand": "npm install --prefix ghag-kennels-website",
   "framework": "vite",
   "rewrites": [
     {

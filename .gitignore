@@ -3,5 +3,5 @@ dist
 .env
 .env.local
 .vercel
-gatezero-kennels-rehoming-website/dist
-gatezero-kennels-rehoming-website/node_modules
+ghag-kennels-website/dist
+ghag-kennels-website/node_modules
