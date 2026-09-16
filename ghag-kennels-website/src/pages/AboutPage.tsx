@@ -87,7 +87,7 @@ export default function AboutPage() {
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 right-[-8%] h-[420px] w-[420px] rounded-full opacity-60 blur-3xl"
-          style={{ background: "radial-gradient(circle, #FFEDD5 0%, rgba(255,237,213,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, #CFEDD0 0%, rgba(255,237,213,0) 70%)" }}
         />
         <div className="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <span className="absolute -bottom-4 left-6 inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[12px] font-bold text-white shadow-lg">
-                  <PawPrint size={14} className="text-[#FDBA74]" /> Our facility · Veera Desai Road, Andheri West
+                  <PawPrint size={14} className="text-clay" fill="currentColor" strokeWidth={0} /> Our facility · Veera Desai Road, Andheri West
                 </span>
               </div>
               <div>
@@ -226,16 +226,16 @@ export default function AboutPage() {
       <section className="pb-20">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-clay to-[#1E3A8A] px-6 py-14 text-center text-white sm:px-12">
+            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-sage to-forest px-6 py-14 text-center text-white sm:px-12">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl"
               />
               <h2 className="font-display relative text-[30px] font-bold leading-[1.08] sm:text-[40px]">
                 Come see for yourself.
-                <span className="block italic text-[#EFF6FF]">Visits are by appointment.</span>
+                <span className="block italic text-[#D7F0D9]">Visits are by appointment.</span>
               </h2>
-              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#EFF6FF]">
+              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#D7F0D9]">
                 Meet the pups, walk the facility and ask us the hard questions —
                 that&rsquo;s exactly what the process is for.
               </p>

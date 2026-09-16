@@ -125,7 +125,7 @@ export default function DogProfilePage() {
                         </span>
                         <p className="text-[13px] font-bold uppercase tracking-[0.08em] text-mint-ink">{rec.label}</p>
                       </div>
-                      <p className="mt-3 text-[13.5px] font-medium leading-relaxed text-[#475569]">{rec.value}</p>
+                      <p className="mt-3 text-[13.5px] font-medium leading-relaxed text-[#3F6247]">{rec.value}</p>
                     </div>
                   );
                 })}
@@ -170,10 +170,10 @@ export default function DogProfilePage() {
                   ))}
                 </div>
 
-                <p className="mt-6 text-[15px] leading-relaxed text-[#475569]">{dog.story}</p>
+                <p className="mt-6 text-[15px] leading-relaxed text-[#3F6247]">{dog.story}</p>
 
                 {/* Facts */}
-                <div className="mt-7 space-y-5 border-t border-[#F6E3CC] pt-6">
+                <div className="mt-7 space-y-5 border-t border-[#CBE7CD] pt-6">
                   <div>
                     <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-faint">Energy level</p>
                     <div className="mt-2.5 flex items-center gap-2">
@@ -200,7 +200,7 @@ export default function DogProfilePage() {
                         return (
                           <span
                             key={g}
-                            className="flex items-center gap-1.5 rounded-full border-[3px] border-sand bg-cream px-3 py-1.5 text-[12px] font-semibold text-[#475569]"
+                            className="flex items-center gap-1.5 rounded-full border-[3px] border-sand bg-cream px-3 py-1.5 text-[12px] font-semibold text-[#3F6247]"
                           >
                             <Icon size={13} className="text-clay" /> {g}
                           </span>
@@ -211,11 +211,11 @@ export default function DogProfilePage() {
 
                   <div>
                     <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-faint">Training so far</p>
-                    <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-[#475569]">{dog.training}</p>
+                    <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-[#3F6247]">{dog.training}</p>
                   </div>
                 </div>
 
-                <div className="mt-7 flex flex-col gap-3 border-t border-[#F6E3CC] pt-6 sm:flex-row">
+                <div className="mt-7 flex flex-col gap-3 border-t border-[#CBE7CD] pt-6 sm:flex-row">
                   <button onClick={() => openInquiry(dog.name)} className="btn btn-primary flex-1 !py-3.5 !text-[15px]">
                     <MessageCircle size={16} /> Inquire about {dog.name}
                   </button>

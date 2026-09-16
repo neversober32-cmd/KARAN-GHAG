@@ -158,10 +158,10 @@ export default function HomePage() {
               <Reveal key={t.name} delay={i * 90}>
                 <figure className="lift flex h-full flex-col rounded-[24px] border-[3px] border-sand bg-white p-7">
                   <Quote size={22} className="text-clay" fill="currentColor" strokeWidth={0} />
-                  <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-[#475569]">
+                  <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-[#3F6247]">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-6 flex items-center gap-3 border-t border-[#F6E3CC] pt-5">
+                  <figcaption className="mt-6 flex items-center gap-3 border-t border-[#CBE7CD] pt-5">
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sage/15 text-[13px] font-bold text-sage-deep">
                       {t.name.charAt(0)}
                     </span>
@@ -184,7 +184,7 @@ export default function HomePage() {
       <section className="pb-20 pt-4">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-clay to-[#1E3A8A] px-6 py-14 text-center text-white sm:px-12">
+            <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-sage to-forest px-6 py-14 text-center text-white sm:px-12">
               <div
                 aria-hidden
                 className="pointer-events-none absolute -left-20 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl"
@@ -195,9 +195,9 @@ export default function HomePage() {
               />
               <h2 className="font-display relative text-[30px] font-bold leading-[1.08] sm:text-[40px]">
                 Ready when you are.
-                <span className="block italic text-[#EFF6FF]">The pups certainly are.</span>
+                <span className="block italic text-[#D7F0D9]">The pups certainly are.</span>
               </h2>
-              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#EFF6FF]">
+              <p className="relative mx-auto mt-4 max-w-[480px] text-[15px] leading-relaxed text-[#D7F0D9]">
                 Start a 3-minute application today — no payment, no pressure,
                 and an honest answer within 24 hours.
               </p>

@@ -40,7 +40,7 @@ export default function HealthSection() {
                 {CHECKLIST.map((item) => (
                   <li
                     key={item.title}
-                    className="flex items-start gap-3 border-b border-[#F6E3CC] py-3.5 last:border-b-0"
+                    className="flex items-start gap-3 border-b border-[#CBE7CD] py-3.5 last:border-b-0"
                   >
                     <span className="mt-0.5 flex h-[22px] w-[22px] flex-none items-center justify-center rounded-full bg-mint text-mint-ink">
                       <Check size={12} strokeWidth={3.2} />
@@ -73,15 +73,15 @@ export default function HealthSection() {
               </div>
 
               <ul className="mt-6 space-y-3.5">
-                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
+                <li className="flex items-start gap-3 text-[14px] text-[#3F6247]">
                   <Clock size={17} className="mt-0.5 flex-none text-clay" />
                   Facility clinic hours: Tue & Sat, 10:00 am – 1:00 pm
                 </li>
-                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
+                <li className="flex items-start gap-3 text-[14px] text-[#3F6247]">
                   <MapPin size={17} className="mt-0.5 flex-none text-clay" />
                   Ghag Facility, Veera Desai Road, Andheri West, Mumbai 400053
                 </li>
-                <li className="flex items-start gap-3 text-[14px] text-[#475569]">
+                <li className="flex items-start gap-3 text-[14px] text-[#3F6247]">
                   <MessageCircle size={17} className="mt-0.5 flex-none text-clay" />
                   WhatsApp-first support — usually replies within a few hours
                 </li>

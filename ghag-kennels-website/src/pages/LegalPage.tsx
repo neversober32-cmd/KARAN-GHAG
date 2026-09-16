@@ -83,7 +83,7 @@ export default function LegalPage() {
           <Reveal delay={100}>
             <div className="lift h-full rounded-[24px] border-[3px] border-sand bg-white p-7 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-parchment text-[#7C6A45]">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-parchment text-[#3F6247]">
                   <FileText size={20} />
                 </span>
                 <h2 className="font-display text-[20px] font-bold">Documents in your handover file</h2>

@@ -34,15 +34,15 @@ export default function LegalSection() {
     <section id="legal" className="py-12">
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <Reveal>
-          <div className="rounded-[32px] bg-forest px-6 py-12 text-[#DFE6F3] sm:px-10 lg:px-16 lg:py-16">
+          <div className="rounded-[32px] bg-forest px-6 py-12 text-[#DCEFDA] sm:px-10 lg:px-16 lg:py-16">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
               {/* Left */}
               <div>
-                <span className="eyebrow !text-[#A9BCDE]">Compliance first</span>
+                <span className="eyebrow !text-[#9FD4A2]">Compliance first</span>
                 <h2 className="font-display mt-3 text-[30px] font-bold leading-[1.08] text-white sm:text-[40px]">
                   Legal, ethical, transparent
                 </h2>
-                <p className="mt-4 max-w-[560px] text-[15px] leading-relaxed text-[#C7D1E1] sm:text-[16px]">
+                <p className="mt-4 max-w-[560px] text-[15px] leading-relaxed text-[#BFE3C0] sm:text-[16px]">
                   As per the Prevention of Cruelty to Animals (Dog Breeding and
                   Marketing) Rules 2017, we are registered with the Maharashtra
                   State Animal Welfare Board — and we hold ourselves to a
@@ -52,12 +52,12 @@ export default function LegalSection() {
                 <ul className="mt-8 space-y-5">
                   {POINTS.map((point) => (
                     <li key={point.title} className="flex items-start gap-3.5">
-                      <span className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-white/10 text-[#A9BCDE]">
+                      <span className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-white/10 text-[#9FD4A2]">
                         <ShieldCheck size={15} />
                       </span>
                       <div>
                         <p className="text-[15px] font-bold text-white">{point.title}</p>
-                        <p className="mt-0.5 text-[13px] text-[#A5B4CD]">{point.sub}</p>
+                        <p className="mt-0.5 text-[13px] text-[#8FC794]">{point.sub}</p>
                       </div>
                     </li>
                   ))}
@@ -72,13 +72,13 @@ export default function LegalSection() {
                     Health Kit Included
                   </h4>
                 </div>
-                <p className="mt-1.5 text-[12px] font-medium text-[#A5B4CD]">
+                <p className="mt-1.5 text-[12px] font-medium text-[#8FC794]">
                   Free with every adoption — no add-ons, no upsells
                 </p>
                 <ul className="mt-5 space-y-3">
                   {KIT.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-[13.5px] font-medium text-[#DFE6F3]">
-                      <Check size={15} strokeWidth={3} className="mt-0.5 flex-none text-[#A9BCDE]" />
+                    <li key={item} className="flex items-start gap-2.5 text-[13.5px] font-medium text-[#DCEFDA]">
+                      <Check size={15} strokeWidth={3} className="mt-0.5 flex-none text-[#9FD4A2]" />
                       {item}
                     </li>
                   ))}
@@ -86,7 +86,7 @@ export default function LegalSection() {
               </div>
             </div>
 
-            <p className="mt-12 border-t border-white/10 pt-6 text-[11px] font-medium tracking-wide text-[#8B98AF]">
+            <p className="mt-12 border-t border-white/10 pt-6 text-[11px] font-medium tracking-wide text-[#6FA476]">
               Prevention of Cruelty to Animals (Dog Breeding and Marketing) Rules, 2017 &nbsp;•&nbsp;
               Pet Shop Rules, 2018 &nbsp;•&nbsp; AWBI Guidelines &nbsp;•&nbsp; Registration No. MH-AWB-2024-XXXX
             </p>

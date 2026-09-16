@@ -193,8 +193,8 @@ export default function ProcessPage() {
                 </div>
                 <h2 className="font-display mt-5 text-[22px] font-bold">{step.title}</h2>
                 <p className="mt-1 text-[12px] font-bold uppercase tracking-[0.12em] text-sage">{step.time}</p>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-[#475569]">{step.desc}</p>
-                <ul className="mt-4 space-y-2 border-t border-[#F6E3CC] pt-4">
+                <p className="mt-3 text-[14.5px] leading-relaxed text-[#3F6247]">{step.desc}</p>
+                <ul className="mt-4 space-y-2 border-t border-[#CBE7CD] pt-4">
                   {step.points.map((p) => (
                     <li key={p} className="flex items-start gap-2.5 text-[13.5px] font-medium text-muted">
                       <span className="mt-[7px] h-1.5 w-1.5 flex-none rounded-full bg-clay" />
@@ -233,7 +233,7 @@ export default function ProcessPage() {
           <Reveal delay={150}>
             <div className="mx-auto mt-10 max-w-[760px] rounded-[24px] bg-forest px-7 py-8 text-center sm:px-10">
               <h3 className="font-display text-[24px] font-bold text-white">Still unsure? Talk to a human.</h3>
-              <p className="mx-auto mt-2 max-w-[420px] text-[14px] leading-relaxed text-[#C7D1E1]">
+              <p className="mx-auto mt-2 max-w-[420px] text-[14px] leading-relaxed text-[#BFE3C0]">
                 Send us your questions on WhatsApp before you apply — we&rsquo;d
                 rather talk you out of the wrong dog than into one.
               </p>

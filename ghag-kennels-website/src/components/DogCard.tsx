@@ -61,7 +61,7 @@ export default function DogCard({ dog, index = 0 }: { dog: Dog; index?: number }
           ))}
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-[#F6E3CC] pt-4">
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 border-t border-[#CBE7CD] pt-4">
           {HEALTH_POINTS.map((point) => (
             <span key={point} className="flex items-center gap-1.5 text-[12px] font-semibold text-mint-ink">
               <Check size={13} strokeWidth={3} />

@@ -15,17 +15,15 @@ const EXPLORE = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-sand bg-[#FFFDF8]">
+    <footer className="border-t border-sand bg-[#F2FAF3]">
       <div className="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-8">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-sage text-forest">
-                <PawPrint size={17} />
-              </span>
+            <Link to="/" className="flex items-center gap-2">
+              <PawPrint size={26} strokeWidth={0} fill="currentColor" className="text-clay" aria-hidden />
               <span className="font-display text-[18px] font-bold tracking-tight">
-                Ghag<span className="text-sage-deep"> Kennels</span>
+                Ghag<span className="text-sage"> Kennels</span>
               </span>
             </Link>
             <p className="mt-4 max-w-[260px] text-[13px] leading-relaxed text-muted">
@@ -43,7 +41,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {EXPLORE.map((l) => (
                 <li key={l.to}>
-                  <Link to={l.to} className="text-[13.5px] font-medium text-[#475569] transition-colors hover:text-sage-deep">
+                  <Link to={l.to} className="text-[13.5px] font-medium text-[#3F6247] transition-colors hover:text-sage-deep">
                     {l.label}
                   </Link>
                 </li>
@@ -57,7 +55,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {DOGS.map((d) => (
                 <li key={d.id}>
-                  <Link to={`/dogs/${d.id}`} className="text-[13.5px] font-medium text-[#475569] transition-colors hover:text-sage-deep">
+                  <Link to={`/dogs/${d.id}`} className="text-[13.5px] font-medium text-[#3F6247] transition-colors hover:text-sage-deep">
                     {d.name} <span className="text-faint">· {d.breed.split(" (")[0]}</span>
                   </Link>
                 </li>
@@ -68,7 +66,7 @@ export default function Footer() {
           {/* Visit */}
           <div>
             <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-faint">Visit us</p>
-            <ul className="mt-4 space-y-3 text-[13.5px] font-medium text-[#475569]">
+            <ul className="mt-4 space-y-3 text-[13.5px] font-medium text-[#3F6247]">
               <li className="flex items-start gap-2.5">
                 <MapPin size={15} className="mt-0.5 flex-none text-clay" />
                 Veera Desai Road, Andheri West, Mumbai 400053

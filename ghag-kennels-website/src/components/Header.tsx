@@ -40,23 +40,27 @@ export default function Header() {
 
   const linkClass = (isActive: boolean) =>
     `rounded-full px-4 py-2.5 text-[14px] font-semibold transition-colors duration-200 ${
-      isActive ? "bg-[#FFEDD5] text-ink" : "text-[#475569] hover:bg-[#FFF3E4] hover:text-ink"
+      isActive ? "bg-[#CFEDD0] text-ink" : "text-[#3F6247] hover:bg-[#DFF2E0] hover:text-ink"
     }`;
 
   return (
     <header
       id="header"
-      className={`sticky top-0 z-50 backdrop-blur-[12px] bg-[rgba(255,247,237,0.88)] transition-shadow duration-300 ${
-        scrolled ? "shadow-[0_1px_0_#F3DFC4,0_8px_24px_rgba(30,30,30,0.04)]" : ""
+      className={`sticky top-0 z-50 backdrop-blur-[12px] bg-[rgba(234,246,236,0.9)] transition-shadow duration-300 ${
+        scrolled ? "shadow-[0_1px_0_#C4E4C6,0_8px_24px_rgba(11,46,16,0.06)]" : ""
       }`}
     >
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
-        <Link to="/" className="group flex items-center gap-2.5" aria-label="Ghag Kennels home">
-          <span className="flex h-10 w-10 items-center justify-center rounded-[14px] bg-sage text-forest transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
-            <PawPrint size={19} strokeWidth={2.2} />
-          </span>
-          <span className="font-display text-[19px] font-bold leading-none tracking-tight sm:text-[20px]">
-            Ghag<span className="text-sage-deep"> Kennels</span>
+        <Link to="/" className="group flex items-center gap-2" aria-label="Ghag Kennels home">
+          <PawPrint
+            size={30}
+            strokeWidth={0}
+            fill="currentColor"
+            className="text-clay transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110"
+            aria-hidden
+          />
+          <span className="font-display text-[20px] font-bold leading-none tracking-tight sm:text-[21px]">
+            Ghag<span className="text-sage"> Kennels</span>
           </span>
         </Link>
 
@@ -102,7 +106,7 @@ export default function Header() {
               end={item.to === "/"}
               className={({ isActive }) =>
                 `rounded-2xl px-4 py-3 text-[15px] font-semibold transition-colors ${
-                  isActive ? "bg-[#FFEDD5] text-ink" : "text-ink hover:bg-[#FFF3E4]"
+                  isActive ? "bg-[#CFEDD0] text-ink" : "text-ink hover:bg-[#DFF2E0]"
                 }`
               }
             >
@@ -114,7 +118,7 @@ export default function Header() {
           </Link>
           <Link
             to="/dashboard"
-            className="mt-1 flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2.5 text-[13px] font-semibold text-faint transition-colors hover:bg-[#FFF3E4] hover:text-ink"
+            className="mt-1 flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2.5 text-[13px] font-semibold text-faint transition-colors hover:bg-[#DFF2E0] hover:text-ink"
           >
             Staff Dashboard <ArrowUpRight size={14} />
           </Link>

@@ -54,12 +54,12 @@ export default function ApplyPage() {
               </p>
 
               <div className="mt-7 rounded-[16px] bg-parchment p-5">
-                <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#7C6A45]">
+                <p className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#3F6247]">
                   What happens next
                 </p>
                 <ul className="mt-4 space-y-3.5">
                   {NEXT_STEPS.map((step) => (
-                    <li key={step.text} className="flex items-start gap-3 text-[14px] font-medium text-[#475569]">
+                    <li key={step.text} className="flex items-start gap-3 text-[14px] font-medium text-[#3F6247]">
                       <span className="mt-0.5 flex h-7 w-7 flex-none items-center justify-center rounded-full bg-white text-sage-deep shadow-sm">
                         <step.icon size={14} />
                       </span>
@@ -67,9 +67,9 @@ export default function ApplyPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-5 flex items-start gap-2.5 border-t border-[#F6E3CC] pt-4">
+                <div className="mt-5 flex items-start gap-2.5 border-t border-[#CBE7CD] pt-4">
                   <ShieldCheck size={16} className="mt-0.5 flex-none text-sage-deep" />
-                  <p className="text-[12px] leading-relaxed text-[#7C6A45]">
+                  <p className="text-[12px] leading-relaxed text-[#3F6247]">
                     We never ask for payment online. If approved, the adoption
                     fee is paid offline at handover — against a receipt.
                   </p>

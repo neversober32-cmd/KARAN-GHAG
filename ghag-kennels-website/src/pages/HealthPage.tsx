@@ -42,13 +42,13 @@ export default function HealthPage() {
                   {SCHEDULE.map((row, i) => (
                     <div
                       key={row.stage}
-                      className={`flex items-center gap-5 border-b border-[#F6E3CC] px-2 py-5 last:border-b-0 ${
-                        i % 2 === 1 ? "bg-[#FFF7ED]" : ""
+                      className={`flex items-center gap-5 border-b border-[#CBE7CD] px-2 py-5 last:border-b-0 ${
+                        i % 2 === 1 ? "bg-[#F2FAF3]" : ""
                       } rounded-[14px]`}
                     >
                       <span
                         className={`flex h-10 w-10 flex-none items-center justify-center rounded-full ${
-                          row.done ? "bg-mint text-mint-ink" : "bg-parchment text-[#93825C]"
+                          row.done ? "bg-mint text-mint-ink" : "bg-parchment text-[#55705B]"
                         }`}
                       >
                         <Syringe size={16} />
@@ -59,7 +59,7 @@ export default function HealthPage() {
                       </div>
                       <span
                         className={`flex-none rounded-full px-3 py-1 text-[11px] font-bold ${
-                          row.done ? "status-available" : "bg-parchment text-[#7C6A45]"
+                          row.done ? "status-available" : "bg-parchment text-[#3F6247]"
                         }`}
                       >
                         {row.done ? "Done with us" : "We guide you"}

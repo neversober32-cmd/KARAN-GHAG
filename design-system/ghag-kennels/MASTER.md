@@ -10,6 +10,28 @@
 **Generated:** 2026-09-16 08:49:10
 **Category:** Pet Tech App
 
+> **USER OVERRIDE — 2026-09-16:** Owner supplied a reference design
+> ("CozyPaws" pet-store hero) and asked for its palette & vibe. The palette
+> below is the user-approved override; style/pattern/a11y rules unchanged.
+
+### Color Palette (user override: forest green + mint + vivid orange)
+
+| Role | Hex | CSS Variable |
+|------|-----|--------------|
+| Primary | `#1E5B28` | `--color-sage` (forest green) |
+| On Primary | `#FFFFFF` | white on green ≥8:1 |
+| Secondary | `#A8E3A4` | `--color-mint` (soft green panels) |
+| On Secondary | `#14532D` | `--color-mint-ink` |
+| Accent/CTA | `#F97316` | `--color-clay` (vivid orange pill) |
+| On Accent/CTA | `#0E3A16` | deep green label, 4.6:1 (white on hover-deep `#C2410C`) |
+| Background | `#EAF6EC` | `--color-cream` (pale mint) |
+| Foreground | `#143D1B` | `--color-ink` (deep green, 11:1) |
+| Card | `#FFFFFF` | white cards |
+| Muted | `#3F6247` | `--color-muted` |
+| Border | `#BFE3C0` | `--color-sand` (light green) |
+| Dark band | `#0B2E10` | `--color-forest` |
+| Destructive | `#DC2626` | unchanged |
+
 ---
 
 ## Global Rules
