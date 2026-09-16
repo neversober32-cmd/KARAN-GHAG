@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, PawPrint, X } from "lucide-react";
+import { ArrowUpRight, Menu, PawPrint, X } from "lucide-react";
 
 const NAV = [
   { label: "Home", to: "/" },
   { label: "Dogs", to: "/dogs" },
+  { label: "About", to: "/about" },
   { label: "Process", to: "/process" },
   { label: "Health", to: "/health" },
   { label: "Legal", to: "/legal" },
-  { label: "Dashboard", to: "/dashboard" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export default function Header() {
@@ -39,12 +40,12 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[72px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
-        <Link to="/" className="group flex items-center gap-2.5" aria-label="Gatezero Kennels home">
+        <Link to="/" className="group flex items-center gap-2.5" aria-label="Ghag Kennels home">
           <span className="flex h-10 w-10 items-center justify-center rounded-[14px] bg-sage text-white transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
             <PawPrint size={19} strokeWidth={2.2} />
           </span>
           <span className="font-display text-[19px] font-bold leading-none tracking-tight sm:text-[20px]">
-            Gatezero<span className="text-sage-deep"> Kennels</span>
+            Ghag<span className="text-sage-deep"> Kennels</span>
           </span>
         </Link>
 
@@ -92,6 +93,12 @@ export default function Header() {
           ))}
           <Link to="/apply" className="btn btn-primary mt-2 w-full">
             Apply for Adoption
+          </Link>
+          <Link
+            to="/dashboard"
+            className="mt-1 flex items-center justify-center gap-1.5 rounded-2xl px-4 py-2.5 text-[13px] font-semibold text-faint transition-colors hover:bg-[#F2F4F9] hover:text-ink"
+          >
+            Staff Dashboard <ArrowUpRight size={14} />
           </Link>
         </nav>
       </div>

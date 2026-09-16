@@ -1,5 +1,6 @@
 import { Syringe } from "lucide-react";
 import HealthSection from "../components/HealthSection";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 
 const SCHEDULE = [
@@ -12,6 +13,10 @@ const SCHEDULE = [
 export default function HealthPage() {
   return (
     <div className="pt-14">
+      <PageMeta
+        title="Health & Vet Care — Ghag Kennels"
+        description="Every Ghag Kennels pup is vet-examined, vaccinated, dewormed and microchipped with complete medical records and lifetime vet support on WhatsApp."
+      />
       <HealthSection />
 
       {/* Vaccination schedule */}
@@ -65,7 +70,7 @@ export default function HealthPage() {
               </div>
 
               <p className="mt-6 rounded-[16px] bg-mint px-5 py-4 text-[13px] font-semibold leading-relaxed text-mint-ink">
-                Every Gatezero pup arrives already through the first two rows —
+                Every Ghag pup arrives already through the first two rows —
                 and your free 7-day check-up plus 30-day vet helpline cover the
                 transition into rows three and four.
               </p>

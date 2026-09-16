@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Bell, Menu, Search } from "lucide-react";
 
 const TITLES: Record<string, { title: string; sub: string }> = {
-  "/dashboard": { title: "Good morning, Team Gatezero", sub: "Here's what's happening across the kennel today." },
+  "/dashboard": { title: "Good morning, Team Ghag", sub: "Here's what's happening across the kennel today." },
   "/dashboard/dogs": { title: "Dog inventory", sub: "Resident pups, health status and availability." },
   "/dashboard/pipeline": { title: "Adoption pipeline", sub: "Every family, from first form to final handover." },
   "/dashboard/boarding": { title: "Boarding & daycare", sub: "Suites, occupancy and upcoming stays." },

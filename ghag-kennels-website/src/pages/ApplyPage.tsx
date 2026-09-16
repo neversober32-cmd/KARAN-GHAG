@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Clock, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import { DOGS, getDog } from "../data/dogs";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 
 const NEXT_STEPS = [
@@ -19,11 +20,11 @@ export default function ApplyPage() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
-    const id = `GZ-2026-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+    const id = `GK-2026-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
     try {
-      const existing = JSON.parse(localStorage.getItem("gz_applications") || "[]");
+      const existing = JSON.parse(localStorage.getItem("gk_applications") || "[]");
       existing.push({ id, ...data, submittedAt: new Date().toISOString() });
-      localStorage.setItem("gz_applications", JSON.stringify(existing));
+      localStorage.setItem("gk_applications", JSON.stringify(existing));
     } catch {
       /* storage unavailable — still show success for demo */
     }
@@ -33,6 +34,10 @@ export default function ApplyPage() {
 
   return (
     <section className="py-14">
+      <PageMeta
+        title="Apply for Adoption — Ghag Kennels"
+        description="Start your 3-minute Ghag Kennels adoption application. No payment, no pressure — an honest answer within 24 hours."
+      />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <Reveal>
           <div className="grid grid-cols-1 gap-10 rounded-[32px] border border-sand bg-white p-6 sm:p-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -44,7 +49,7 @@ export default function ApplyPage() {
               </h1>
               <p className="mt-3 max-w-[440px] text-[15px] leading-relaxed text-muted">
                 No payment now. Tell us about your life, and we&rsquo;ll tell you
-                honestly whether a Gatezero pup fits into it. We review in 24
+                honestly whether a Ghag pup fits into it. We review in 24
                 hours and WhatsApp you.
               </p>
 

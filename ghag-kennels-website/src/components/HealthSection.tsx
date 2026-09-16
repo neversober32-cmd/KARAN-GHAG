@@ -20,7 +20,7 @@ export default function HealthSection() {
               Healthy pups. Honest paperwork.
             </h2>
             <p className="max-w-[380px] text-[15px] text-muted">
-              Every Gatezero pup leaves with complete medical records — nothing
+              Every Ghag pup leaves with complete medical records — nothing
               verbal, everything on paper.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function HealthSection() {
                 </li>
                 <li className="flex items-start gap-3 text-[14px] text-[#45464D]">
                   <MapPin size={17} className="mt-0.5 flex-none text-clay" />
-                  Gatezero Facility, Veera Desai Road, Andheri West, Mumbai 400053
+                  Ghag Facility, Veera Desai Road, Andheri West, Mumbai 400053
                 </li>
                 <li className="flex items-start gap-3 text-[14px] text-[#45464D]">
                   <MessageCircle size={17} className="mt-0.5 flex-none text-clay" />

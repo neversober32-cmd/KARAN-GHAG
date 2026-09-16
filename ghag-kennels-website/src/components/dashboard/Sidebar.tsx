@@ -40,7 +40,7 @@ export default function Sidebar({ open, onClose }: { open: boolean; onClose: () 
               <PawPrint size={18} />
             </span>
             <span className="leading-tight">
-              <span className="font-display block text-[16px] font-bold">Gatezero</span>
+              <span className="font-display block text-[16px] font-bold">Ghag</span>
               <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
                 Ops Dashboard
               </span>

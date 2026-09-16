@@ -1,11 +1,12 @@
 import { FileText, ScrollText, ShieldCheck } from "lucide-react";
 import LegalSection from "../components/LegalSection";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 
 const LAWS = [
   {
     title: "Prevention of Cruelty to Animals Act, 1960",
-    desc: "The foundation of animal welfare law in India — every practice at Gatezero is built to exceed it.",
+    desc: "The foundation of animal welfare law in India — every practice at Ghag is built to exceed it.",
   },
   {
     title: "Dog Breeding & Marketing Rules, 2017",
@@ -31,6 +32,10 @@ const DOCS = [
 export default function LegalPage() {
   return (
     <div className="py-12">
+      <PageMeta
+        title="Legal & Ethics — Ghag Kennels"
+        description="How Ghag Kennels complies with Indian animal welfare law: AWB registration, PCA Act standards, no online payment for live animals, and a lifetime take-back promise."
+      />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <Reveal>
           <div className="mb-4">

@@ -1,15 +1,18 @@
-import { HashRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import { ArrowLeft, PawPrint } from "lucide-react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PageMeta from "./components/PageMeta";
 import ScrollToTop from "./components/ScrollToTop";
 import { InquiryProvider } from "./context/InquiryContext";
 import HomePage from "./pages/HomePage";
 import DogsPage from "./pages/DogsPage";
 import DogProfilePage from "./pages/DogProfilePage";
+import AboutPage from "./pages/AboutPage";
 import ProcessPage from "./pages/ProcessPage";
 import HealthPage from "./pages/HealthPage";
 import LegalPage from "./pages/LegalPage";
+import ContactPage from "./pages/ContactPage";
 import ApplyPage from "./pages/ApplyPage";
 import DashboardLayout from "./pages/dashboard/DashboardLayout";
 import OverviewPage from "./pages/dashboard/OverviewPage";
@@ -22,6 +25,7 @@ import EnquiriesPage from "./pages/dashboard/EnquiriesPage";
 function NotFoundPage() {
   return (
     <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center px-5 py-28 text-center sm:px-8">
+      <PageMeta title="Page not found — Ghag Kennels" />
       <span className="flex h-16 w-16 items-center justify-center rounded-3xl bg-mint text-sage-deep">
         <PawPrint size={30} />
       </span>
@@ -65,9 +69,11 @@ function Shell() {
           <Route path="/" element={<HomePage />} />
           <Route path="/dogs" element={<DogsPage />} />
           <Route path="/dogs/:dogId" element={<DogProfilePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/process" element={<ProcessPage />} />
           <Route path="/health" element={<HealthPage />} />
           <Route path="/legal" element={<LegalPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/apply" element={<ApplyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -79,11 +85,11 @@ function Shell() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <InquiryProvider>
         <ScrollToTop />
         <Shell />
       </InquiryProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

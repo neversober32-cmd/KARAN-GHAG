@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
+import PageMeta from "../components/PageMeta";
 import DogCard from "../components/DogCard";
 import LegalSection from "../components/LegalSection";
 import Reveal from "../components/Reveal";
@@ -54,6 +55,10 @@ export default function HomePage() {
 
   return (
     <>
+      <PageMeta
+        title="Ghag Kennels — Ethical Dog Rehoming in Mumbai"
+        description="Ghag Kennels is an ethical dog rehoming platform in Andheri West, Mumbai. Vet-checked, vaccinated, microchipped pups. No cart, no instant buy — only screened, loving homes."
+      />
       <Hero />
       <Marquee />
 
@@ -142,7 +147,7 @@ export default function HomePage() {
       <section className="bg-parchment py-20">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
           <Reveal>
-            <span className="eyebrow">From Gatezero families</span>
+            <span className="eyebrow">From Ghag families</span>
             <h2 className="font-display mt-3 max-w-[600px] text-[32px] font-bold leading-[1.05] tracking-[-0.01em] sm:text-[42px]">
               Homes, not transactions
             </h2>

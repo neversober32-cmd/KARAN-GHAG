@@ -10,6 +10,7 @@ import {
   Video,
   type LucideIcon,
 } from "lucide-react";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 
 interface Step {
@@ -87,7 +88,7 @@ const FAQS = [
   },
   {
     q: "What if it doesn't work out?",
-    a: "Every Gatezero dog has a lifetime take-back promise — no questions, no judgment, ever. We'd far rather a dog come back to us than end up abandoned or passed around. That said, our screening exists precisely so this rarely happens.",
+    a: "Every Ghag dog has a lifetime take-back promise — no questions, no judgment, ever. We'd far rather a dog come back to us than end up abandoned or passed around. That said, our screening exists precisely so this rarely happens.",
   },
   {
     q: "Are Indies really good apartment dogs?",
@@ -133,6 +134,10 @@ export default function ProcessPage() {
 
   return (
     <div className="py-14">
+      <PageMeta
+        title="Adoption Process — Ghag Kennels"
+        description="The four-step Ghag Kennels adoption process: apply, screening call, meet & greet, and handover with a home check. No instant buying, no online payment."
+      />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         {/* Intro */}
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1fr_0.85fr]">
@@ -162,7 +167,7 @@ export default function ProcessPage() {
               <div aria-hidden className="absolute inset-0 rotate-[2deg] scale-[1.01] rounded-[36px] bg-mint" />
               <img
                 src="/images/facility.jpg"
-                alt="A family meeting puppies at the Gatezero facility in Andheri West"
+                alt="A family meeting puppies at the Ghag facility in Andheri West"
                 className="relative h-[300px] w-full rounded-[28px] object-cover shadow-[0_20px_48px_rgba(0,0,0,0.1)] sm:h-[380px]"
                 loading="lazy"
                 decoding="async"

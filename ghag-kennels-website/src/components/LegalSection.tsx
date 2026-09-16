@@ -16,7 +16,7 @@ const POINTS = [
   },
   {
     title: "Annual reporting to the AWB",
-    sub: "Plus a lifetime take-back promise for every Gatezero dog, no questions asked",
+    sub: "Plus a lifetime take-back promise for every Ghag dog, no questions asked",
   },
 ];
 

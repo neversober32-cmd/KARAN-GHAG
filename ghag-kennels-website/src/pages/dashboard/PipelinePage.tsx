@@ -10,7 +10,7 @@ const COLS = [
   { key: "homecheck", title: "Home check", hint: "→ handover", color: "#5E9B6A" },
 ];
 
-const STORE_KEY = "gz_pipeline";
+const STORE_KEY = "gk_pipeline";
 
 function load(): Record<string, PipelineCard[]> {
   try {

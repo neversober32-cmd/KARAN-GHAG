@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, Search, X } from "lucide-react";
 import DogCard from "../components/DogCard";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 import { DOGS, FILTERS } from "../data/dogs";
 
@@ -24,6 +25,10 @@ export default function DogsPage() {
 
   return (
     <section className="bg-white py-14">
+      <PageMeta
+        title="Our Dogs — Ghag Kennels"
+        description="Meet the pups currently looking for homes at Ghag Kennels, Mumbai. Every dog is vet-checked, vaccinated, microchipped and honestly described."
+      />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         <Reveal>
           <span className="eyebrow">Available now</span>

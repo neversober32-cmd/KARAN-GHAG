@@ -30,14 +30,14 @@ export default function InquiryModal({ dog, onClose }: InquiryModalProps) {
     const name = String(data.name || "");
     const phone = String(data.phone || "");
     try {
-      const existing = JSON.parse(localStorage.getItem("gz_inquiries") || "[]");
+      const existing = JSON.parse(localStorage.getItem("gk_inquiries") || "[]");
       existing.push({ dog, name, phone, at: new Date().toISOString() });
-      localStorage.setItem("gz_inquiries", JSON.stringify(existing));
+      localStorage.setItem("gk_inquiries", JSON.stringify(existing));
     } catch {
       /* storage unavailable — continue */
     }
     const text = encodeURIComponent(
-      `Hello Gatezero Kennels! I'm ${name} (${phone}). I'd like to inquire about ${dog} for adoption.`
+      `Hello Ghag Kennels! I'm ${name} (${phone}). I'd like to inquire about ${dog} for adoption.`
     );
     window.open(`https://wa.me/?text=${text}`, "_blank", "noopener");
     setSent(true);

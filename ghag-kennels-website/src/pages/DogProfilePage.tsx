@@ -19,6 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import DogCard from "../components/DogCard";
+import PageMeta from "../components/PageMeta";
 import Reveal from "../components/Reveal";
 import { useInquiry } from "../context/InquiryContext";
 import { DOGS, getDog } from "../data/dogs";
@@ -51,6 +52,7 @@ export default function DogProfilePage() {
   if (!dog) {
     return (
       <div className="mx-auto flex w-full max-w-[1200px] flex-col items-center px-5 py-24 text-center sm:px-8">
+        <PageMeta title="Pup not found — Ghag Kennels" />
         <h1 className="font-display text-[32px] font-bold">That pup isn&rsquo;t here</h1>
         <p className="mt-2 text-[15px] text-muted">It may have found its family already — wonderful news.</p>
         <Link to="/dogs" className="btn btn-primary mt-7">
@@ -65,6 +67,10 @@ export default function DogProfilePage() {
 
   return (
     <div className="py-10 sm:py-14">
+      <PageMeta
+        title={`${dog.name} — ${dog.breed} · Ghag Kennels`}
+        description={`${dog.name} is a ${dog.age} old ${dog.breed} looking for a home through Ghag Kennels, Mumbai. ${dog.status === "Available" ? "Available now." : "Currently reserved."}`}
+      />
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-8">
         {/* Breadcrumb */}
         <Reveal>

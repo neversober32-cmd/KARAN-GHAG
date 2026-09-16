@@ -8,7 +8,7 @@ const STATUSES = ["All", "New", "Contacted", "Visit booked", "Converted", "Dropp
 const toneFor = (s: Enquiry["status"]) =>
   s === "New" ? "blue" : s === "Contacted" ? "amber" : s === "Visit booked" ? "neutral" : s === "Converted" ? "green" : "red";
 
-const STORE_KEY = "gz_enquiries";
+const STORE_KEY = "gk_enquiries";
 
 function load(): Enquiry[] {
   try {
@@ -124,7 +124,7 @@ export default function EnquiriesPage() {
                   <td className="px-5 py-3.5 text-right">
                     <div className="flex justify-end gap-2">
                       <a
-                        href={`https://wa.me/?text=${encodeURIComponent(`Hello ${r.name}! This is Gatezero Kennels — following up on your enquiry about ${r.interest}.`)}`}
+                        href={`https://wa.me/?text=${encodeURIComponent(`Hello ${r.name}! This is Ghag Kennels — following up on your enquiry about ${r.interest}.`)}`}
                         target="_blank"
                         rel="noreferrer"
                         className="flex items-center gap-1 rounded-full bg-[#3E5C9B] px-3.5 py-1.5 text-[12px] font-bold text-white transition-colors hover:bg-[#2C4373]"

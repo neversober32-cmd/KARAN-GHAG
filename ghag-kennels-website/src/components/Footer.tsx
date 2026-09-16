@@ -5,9 +5,11 @@ import { DOGS } from "../data/dogs";
 const EXPLORE = [
   { label: "Home", to: "/" },
   { label: "Our Dogs", to: "/dogs" },
+  { label: "About Us", to: "/about" },
   { label: "Adoption Process", to: "/process" },
   { label: "Health & Vet Care", to: "/health" },
   { label: "Legal & Ethics", to: "/legal" },
+  { label: "Contact", to: "/contact" },
   { label: "Apply for Adoption", to: "/apply" },
 ];
 
@@ -23,7 +25,7 @@ export default function Footer() {
                 <PawPrint size={17} />
               </span>
               <span className="font-display text-[18px] font-bold tracking-tight">
-                Gatezero<span className="text-sage-deep"> Kennels</span>
+                Ghag<span className="text-sage-deep"> Kennels</span>
               </span>
             </Link>
             <p className="mt-4 max-w-[260px] text-[13px] leading-relaxed text-muted">
@@ -81,16 +83,21 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <AtSign size={15} className="mt-0.5 flex-none text-clay" />
-                gatezero.in on Instagram
+                @ghagkennels on Instagram
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-sand pt-6 text-[13px] text-faint sm:flex-row">
-          <p>© 2026 Gatezero Kennels, Mumbai. Ethical Rehoming Only.</p>
-          <p className="flex items-center gap-1.5">
-            <MapPin size={14} /> Andheri West · No online payment for live animals, ever
+          <p>© 2026 Ghag Kennels, Mumbai. Ethical Rehoming Only.</p>
+          <p className="flex items-center gap-4">
+            <Link to="/dashboard" className="transition-colors hover:text-sage-deep">
+              Staff Dashboard
+            </Link>
+            <span className="flex items-center gap-1.5">
+              <MapPin size={14} /> Andheri West · No online payment for live animals, ever
+            </span>
           </p>
         </div>
       </div>

@@ -57,7 +57,7 @@ export default function Hero() {
 
           <Reveal delay={170}>
             <p className="mt-6 max-w-[520px] text-[17px] leading-relaxed text-muted sm:text-[18px]">
-              Gatezero is an ethical rehoming platform in Mumbai. Every pup is
+              Ghag is an ethical rehoming platform in Mumbai. Every pup is
               vet-checked, vaccinated, microchipped and socialized. No cart. No
               instant buy. Only screened, loving homes.
             </p>

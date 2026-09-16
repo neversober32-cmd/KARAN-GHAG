@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "../../components/dashboard/Sidebar";
 import Topbar from "../../components/dashboard/Topbar";
+import PageMeta from "../../components/PageMeta";
 
 export default function DashboardLayout() {
   const [open, setOpen] = useState(false);
@@ -9,6 +10,7 @@ export default function DashboardLayout() {
 
   return (
     <div className="flex min-h-screen bg-[#F4F3EF] text-ink">
+      <PageMeta title="Ops Dashboard — Ghag Kennels" />
       <Sidebar open={open} onClose={() => setOpen(false)} />
       <div className="flex min-w-0 flex-1 flex-col">
         <Topbar path={pathname} onMenu={() => setOpen(true)} />
